@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Order Food</title>
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <div class="container mt-5">
+    <h1>Order Food</h1>
+    <form id="orderForm">
+      <div class="form-group">
+        <label for="name">Name of food items:</label><br>
+        <select><option value="Hakka Noodles">Hakka Noodles</option>
+        <option value="Choco Lava Cake">Choco Lava Cake</option>
+        <option value="Gajar ka Halwa">Gajar ka Halwa</option>
+        <option value="plain Uttapam">Plain Uttapam</option>
+        <option value="Veg Uttapam">Veg Uttapam</option>
+        <option value="Veg Soup">Veg Soup</option>
+        <option value="Hot and sour soup">Hot and Sour Soup</option>
+      <option value="Dosa">Dosa</option>
+      <option value="matar paneer">Matar Paneer</option>
+    </select>
+        
+</div>
+      <div class="form-group">
+        <label for="timing">Your instructions :</label>
+        <input type="text" class="form-control" id="timing" placeholder="Enter your instructions" required>
+      </div>
+      <div class="form-group">
+        <label for="members">Quantity:</label>
+        <input type="number" class="form-control" id="members" placeholder="Enter quantity of food items" required>
+      </div>
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+  <script>
+    document.getElementById('orderForm').addEventListener('submit', function(event) {
+      event.preventDefault();
+      Swal.fire(
+        'Done',
+        'Thanks for Ordering.',
+        'success'
+      );
+    });
+  </script>
+    <footer>
+        <p>&copy; 2023 FoodieClub</p>
+      </footer>
+</body>
+</html>

@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Foodieclub</title>
+    <link rel="stylesheet"href="css/style.css">
+    <link rel="stylesheet" media="screen and (max-width: 1170px)" href="css/phone.css">
+    
+</head>
+<body>
+    <script>
+        let currentSlide = 0;
+
+function showSlide(index) {
+const slides = document.querySelector('.slides');
+const slideWidth = document.querySelector('.slide').clientWidth;
+
+if (index < 0) {
+  currentSlide = slides.childElementCount - 1;
+} else if (index >= slides.childElementCount) {
+  currentSlide = 0;
+} else {
+  currentSlide = index;
+}
+
+slides.style.transform = `translateX(${-currentSlide * slideWidth}px)`;
+}
+
+function nextSlide() {
+showSlide(currentSlide + 1);
+}
+
+function prevSlide() {
+showSlide(currentSlide - 1);
+}
+</script>
+
+
+    <style>
+        .image{
+            height:300px;
+            width: 500px;
+        }
+        .bg{
+            background-image: url("images/bg2.avif");
+            background-size: 100%;
+        }
+        .color1{
+            color:white;
+            font-size: 400%;
+        }
+        .color{
+            color:white;
+            font-size: 375%;
+        }
+        
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Arial', sans-serif;
+    }
+
+    .slider {
+      position: relative;
+      width:300px;
+      height:300px;
+      margin: auto;
+      overflow: hidden;
+    }
+
+    .slides {
+      display: flex;
+      transition: transform 0.5s ease-in-out;
+    }
+
+    .slide {
+      min-width: 100%;
+      box-sizing: border-box;
+    }
+
+    img {
+      width: 100%;
+      height: auto;
+    }
+
+    .navigation {
+      position: absolute;
+      top: 50%;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      transform: translateY(-50%);
+    }
+
+    .prev, .next {
+      cursor: pointer;
+      padding: 10px;
+      background-color: #333;
+      color: #fff;
+      border: none;
+      outline: none;
+      font-size: 18px;
+    }
+    .imgsize{
+        height:500px;
+    }
+
+
+
+  
+    </style>
+    
+
+    
+    <nav id="navbar">
+        <div id="logo">
+            <img src="images/logo.jpg" alt="Foodieclub.com">
+        </div>
+        <ul>
+            <li class="item"><a href="#home">Home</a></li>
+            <li class="item"><a href="profile.html">Profile</a></li>
+            <li class="item"><a href="#services-container">Services</a></li>
+            <li class="item"><a href="menu.html">Menu</a></li>
+            <li class="item"><a href="contact.html">Contact Us</a></li>
+            <li class="item"><a href="#deals">Deals of the Day!</a></li>
+            
+        </ul>
+    </nav>
+    <section id="home"class="bg">
+        <h1 class="color1"><b>Welcome to Foodieclub</b></h1>
+        <h3 class="color">For the Foodies...By the foodies</h3></br>
+        <p>A one stop solution for all your cravings.</p>
+        <p>An initiative to treat you with the authentic taste of Indian,Chinese and Thai food.</p>
+    <form action="order.html">
+        <button class="btn">Order Now</button>
+        </form>
+    </section>
+    <section id="services-container">
+        <h1 class="h-primary center">Our Services</h1>
+        <div id="services">
+            <div class="box">
+                <a href="foodcater.html">
+                <img src="images/catering.jpg" alt=""></a>
+                <h2 class="h-secondary center">Food Catering</h2>
+                <p class="center">We aim at serving the best food in parties,innaugurations and weddings.</p>
+                <p class="center">We offer Indian ,chinese and Thai food.</p>
+                <p class="center">Contact us at:0123456789 for Catering services</p>
+            </div>
+            <div class="box">
+                <a href="foodorder.html">
+                
+                <img src="images/foodorder.jpg" alt=""></a>
+                <h2 class="h-secondary center">Food ordering</h2>
+                <p class="center">It's 1:00 am and you are working on your project which has a submission deadline tommorow.
+                <p class="center">Suddenly you start craving for a delicious dessert</p>
+                <p class="center">But you can't cook due to lack of time.</p>
+                <p class="center">So,we are here to help you out.Dial:1323324355 and get your favourite meal delivered at your doorstep even at midnight</p>
+            </div>
+    
+            <div class="box">
+                <a href="tiffinservices.html">
+                <img src="images/tiffin.png" alt=""></a>
+                <h2 class="h-secondary center">Tiffin Service</h2>
+                <p class="center">Are you an aspirant,student or employe who is living away from home?</p>
+                <p class="center">Do you miss the taste of home cooked food?</p>
+                <p class="center">Don't worry!Foodiesclub provides Tiffin service too "Ghar ka khana".</p>
+                <p class="center">The food here is prepared with high qualitiy spices and packed freshly.</p>
+                <p class="center">Complete Hygiene is maintained while preparation and packing of food. </p>
+                </div>
+            </section>
+            <section id="deals">
+            <div class="slider">
+              <div class="slides">
+                <div class="slide"><img src="images/d1.jpeg" class="imgsize" alt="Slide 1"></div>
+                <div class="slide"><img src="images/d2.jpeg" class="imgsize"alt="Slide 2"></div>
+                <div class="slide"><img src="images/d3.jpeg" class="imgsize"alt="Slide 3"></div>
+                <div class="slide"><img src="images/d4.jpeg" class="imgsize"alt="slide 4"></div>
+                <div class="slide"><img src="images/d5.jpeg" class="imgsize"alt="slide 5"></div>
+            
+                <!-- Add more slides as needed -->
+              </div>
+            
+              <div class="navigation">
+                <button class="prev" onclick="prevSlide()">&#10094; </button>
+                <button class="next" onclick="nextSlide()"> &#10095;</button>
+              </div>
+            </div>
+
+    </section>
+    <footer>
+      <p>&copy; 2023 FoodieClub</p>
+    </footer>
+  
+
+
+</body>
+</html>
